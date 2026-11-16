@@ -1,0 +1,14 @@
+body {
+    color: white;
+    display: flex;
+    flex-direction: row; 
+}
+
+.red {
+    background-color: red;
+
+}
+
+.blue {
+    background-color: blue;
+}
