@@ -1,0 +1,162 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background:#e9e9e9;
+	
+
+
+}
+.contenedor {
+	background:#ccc;
+	width: 90%;
+	margin: 0 auto;
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: 1.2fr 2fr 2fr 2fr 1.8fr;
+	grid-template-rows: 1.5fr 4fr 4fr 1fr;
+	grid-template-areas:
+	"header header header header header"
+	"nav primero primero gato aside"
+	"nav fb sn tw aside"
+	"footer footer footer footer footer";
+}
+header, footer {
+	background:#2c3e50;
+	padding:16px;
+	font-size:2em;
+	grid-area:header;
+}
+header .logo a {
+	color:#fff;
+	text-decoration: none;
+	line-height:50px;
+}
+nav{
+	background:#c0392b;
+	grid-area:nav;
+	display: flex;
+	flex-direction: column;
+}
+a{
+	color:#fff;
+	text-decoration: none;
+	padding:10px;
+}
+nav a:hover {
+	background:#e74c3c;
+}
+
+article:nth-of-type(1){
+	grid-area: primero;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+article:nth-of-type(2){
+	grid-area: gato;
+	display:flex;
+	align-items: center;
+}
+article:nth-of-type(3){
+	grid-area: fb;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+}
+article:nth-of-type(4){
+	grid-area: sn;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+article:nth-of-type(5){
+	grid-area: tw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+.primero p{
+	text-align: justify;
+}
+
+article{
+	width: 85%;
+	text-align: center;
+	margin: .5em 0;
+}
+img{
+	border-radius: 1em;
+	padding: .5em;
+	max-width: 100%;
+	height: auto;
+}
+img[alt="logo"]{
+	border-radius: 50%;
+}
+aside {
+	background:#e67e22;
+	padding:20px;
+	grid-area: aside;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+aside .widget {
+	background: #d35400;
+	height:150px;
+	margin:10px;
+}
+footer {
+	font-size: 1em;
+	grid-area:footer;
+	display:flex;
+	justify-content: space-between;
+}
+footer .social {
+	background:#e67e22;
+}
+
+
+@media (max-width: 768px) {
+
+	.contenedor{
+		grid-template-rows: auto auto auto auto;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-areas:
+		"header header header header"
+		"nav nav nav nav"
+		"primero primero gato aside"
+		"fb sn tw aside"
+		"footer footer footer footer";
+	}
+
+	nav{
+		flex-direction: row;
+		justify-content: flex-start;
+
+
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+

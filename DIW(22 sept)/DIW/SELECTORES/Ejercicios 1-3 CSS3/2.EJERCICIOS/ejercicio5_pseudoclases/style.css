@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/*2*/
+
+section {
+    background-color: #dfdfdf;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap:1rem;
+    
+}
+.types{
+    display: flex;
+    justify-content: space-around;
+}
+li{
+    list-style: none;
+}
+
+.UI{
+    width:60%;
+    padding-bottom: 2rem;
+}
+
+h1{
+    color: #4682B4;
+    border-bottom: 1px solid white;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:.5em;
+    width: 50%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+form input[type="text"],form input[type="email"], form textarea{
+border:2px solid steelblue;
+width: 100%;
+margin-bottom: .3em;
+}
+
+form input[type="submit"]{
+    border: 2px solid white;
+    background-color: steelblue;
+    margin:.5rem;
+    padding: .5rem;
+
+
+}
+
+/*3*/
+
+.nth-of-type li:nth-of-type(odd){
+
+    background-color: blue;
+    color: white;
+    font-size: 2rem;
+
+}
+
+.nth-of-type div:nth-of-type(odd){
+    background-color: orange;
+    color:white;
+    font-size: 2rem;
+}
+
+.nth-of-type strong{
+    color: red;
+    font-size: 1.5rem;
+}
+
+.nth-of-type > *{
+    border: 1px solid black;
+    margin: 6px;
+    padding: 2px;
+}
+
+/*4*/
+
+/*poner tambien a todo green y ya despues solo poner el red a los pares y asi me ahorro 3 lineas de codigo MAS EFICIENTE*/
+.nth-child li:nth-child(odd){
+    background-color: green;
+}
+
+.nth-child li:nth-child(2n){
+    background-color: red;
+}
+
+.nth-child li{
+    margin: 6px;
+    padding: 2px;
+}
+
+
+
+/*5*/
+
+form input[placeholder="Nombre"], form input[placeholder="Comentarios"] {
+    background-color: #666;
+    cursor:no-drop;
+}
+/*
+form :disabled {
+    background-color: #666;
+    cursor:no-drop;
+}
+*/
+
+form input[placeholder="Email"]:enabled{
+    background-color: yellow;
+    color: green;
+}
+
+form input[type="radio"]:checked + label{
+    font-weight: bold;
+    color: white;
+    border: 1px solid steelblue;
+}
+
+form input[type="radio"] + label{
+    color:  steelblue;
+}
+
+
+
+
+
